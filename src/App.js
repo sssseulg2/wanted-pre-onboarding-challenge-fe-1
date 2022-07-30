@@ -1,24 +1,44 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import styled from 'styled-components';
+
+import Home from './pages/Home.js'
+import Auth from './pages/Auth.js'
+import GlobalFonts from './styles/font.js'
+
 import './App.css';
+
+const Container = styled.div`
+width: 100vw;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #EEE;
+
+`
+const Card = styled.div`
+width: 40vw;
+height: 80vh;
+/* background-color: #AFCBFF; */
+background-color: #495C83;
+border-radius: 2rem;
+box-shadow: 0.8rem 0.8rem 0.5rem grey;
+font-family: 'twayair';
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <BrowserRouter>
+      <GlobalFonts />
+      <Container>
+        <Card>
+        <Routes>
+          <Route path='/' element={<Home />}></Route>
+          <Route path='/auth' element={<Auth/>} />
+        </Routes>
+        </Card>
+      </Container>
+      </BrowserRouter>
   );
 }
 
