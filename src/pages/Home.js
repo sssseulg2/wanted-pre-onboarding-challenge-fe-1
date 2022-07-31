@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom"
 import styled from "styled-components"
 
 const Title = styled.div`
 font-size: 3rem;
-color: white;
+color: #eee;
 `
 const ButtonWrap = styled.div`
 width: 15vw;
@@ -40,8 +41,8 @@ function Home() {
         <Container>
             <Title>TODO LIST</Title>
             <ButtonWrap>
-                <StyledButton>로그인</StyledButton>
-                <StyledButton>회원가입</StyledButton>
+                <Link to='/auth' state={{tab:0}}><StyledButton>로그인</StyledButton></Link>
+                <Link to='/auth' state={{tab:1}}><StyledButton>회원가입</StyledButton></Link>
             </ButtonWrap>
         </Container>
     )
