@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import Home from './pages/Home.js'
 import Auth from './pages/Auth.js'
+import GlobalStyle from './styles/GlobalStyle.js';
 import GlobalFonts from './styles/font.js'
 
 import './App.css';
@@ -29,6 +30,7 @@ font-family: 'twayair';
 function App() {
   return (
       <BrowserRouter>
+      <GlobalStyle />
       <GlobalFonts />
       <Container>
         <Card>
