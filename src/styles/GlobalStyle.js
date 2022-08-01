@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: #607EAA;
     color: #eee;
     font-size: 0.9rem;
-    font-family: 'twayair';
+    font-family: 'NEXON Lv2 Gothic';
     &:hover{
         background-color: #1C3879;
         transition: all 0.5s;

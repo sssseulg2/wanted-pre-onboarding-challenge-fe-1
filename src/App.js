@@ -24,7 +24,7 @@ height: 80vh;
 background-color: #F9F5EB;
 border-radius: 2rem;
 box-shadow: 0.8rem 0.8rem 0.5rem grey;
-font-family: 'twayair';
+font-family: 'NEXON Lv2 Gothic';
 `
 
 function App() {

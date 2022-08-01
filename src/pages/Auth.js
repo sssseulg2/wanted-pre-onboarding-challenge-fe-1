@@ -6,7 +6,6 @@ import SignUp from "../components/SignUp"
 function Auth() {
     const location = useLocation();
     let tab = location.state === null ? 0 : location.state.tab;
-    console.log(location, tab)
 
     return(
         <>

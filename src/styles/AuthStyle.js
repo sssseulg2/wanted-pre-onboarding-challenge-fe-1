@@ -19,7 +19,7 @@ padding-left: 1rem;
 border: none;
 border-radius: 5px;
 font-size: 0.9rem;
-font-family: 'twayair';
+font-family: 'NEXON Lv2 Gothic';
 &:focus {
     outline: none;
 }
@@ -34,4 +34,12 @@ color: #eee;
     background-color: #1C3879;
     transition: all 0.5s;
 }
+`
+export const StyledDisabledSubmit = styled(StyledInput)`
+width: 12vw !important;
+margin-top: 4vh !important;
+padding: 0 !important;
+text-align: center;
+background-color: #AAA;
+color: #eee;
 `
