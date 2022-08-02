@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom"
+import { useEffect } from "react"
+import { Link, useNavigate } from "react-router-dom"
 import styled from "styled-components"
 import * as c from "../styles/common.js"
 
@@ -17,6 +18,10 @@ margin-bottom: 3vh;
 `
 
 function Home() {
+    const navigate = useNavigate();
+    useEffect(() => {
+        localStorage.getItem("token") && navigate("/todolist/0");
+    }, [navigate])
     return (
         <c.Container>
             <c.Title>TODO LIST</c.Title>

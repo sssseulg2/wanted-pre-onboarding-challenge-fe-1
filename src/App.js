@@ -21,7 +21,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home id={0}/> } />
           <Route path='/auth' element={<Auth/>} />
-          <Route path='/todolist' element={<TodoList/>} />
+          <Route path='/todolist/:id' element={<TodoList/>} />
         </Routes>
         </Card>
       </Container>
@@ -40,7 +40,7 @@ background-color: #EAE3D2;
 
 `
 const Card = styled.div`
-width: 40vw;
+width: 60vw;
 height: 80vh;
 /* background-color: #AFCBFF; */
 background-color: #F9F5EB;

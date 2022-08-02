@@ -1,11 +1,13 @@
 import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import * as s from "../styles/AuthStyle.js"
 import * as c from "../styles/common.js"
 
 
 
 function SignIn() {
+    const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [emailError, setEmailError] = useState(null);
     const [password, setPassword] = useState('');
@@ -33,10 +35,8 @@ function SignIn() {
               email,
               password,
             });
-            alert(res.data.message);
-            console.log(res.data);
-            // localStorage.setItem("token", res.data.token);
-            // navigate("/todolist");
+            localStorage.setItem("token", res.data.token);
+            navigate("/todolist");
           } catch (error) {
             alert(error.response.data.details);
           }
