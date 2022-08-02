@@ -1,12 +1,34 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 
-import Home from './pages/Home.js'
-import Auth from './pages/Auth.js'
+import Home from './pages/Home.js';
+import Auth from './pages/Auth.js';
+import TodoList from './pages/TodoList.js';
+
 import GlobalStyle from './styles/GlobalStyle.js';
-import GlobalFonts from './styles/font.js'
+import GlobalFonts from './styles/font.js';
 
 import './App.css';
+
+
+function App() {
+  return (
+      <BrowserRouter>
+      <GlobalStyle />
+      <GlobalFonts />
+      <Container>
+        <Card>
+        <Routes>
+          <Route path='/' element={<Home id={0}/> } />
+          <Route path='/auth' element={<Auth/>} />
+          <Route path='/todolist' element={<TodoList/>} />
+        </Routes>
+        </Card>
+      </Container>
+      </BrowserRouter>
+  );
+}
+
 
 const Container = styled.div`
 width: 100vw;
@@ -26,23 +48,5 @@ border-radius: 2rem;
 box-shadow: 0.8rem 0.8rem 0.5rem grey;
 font-family: 'NEXON Lv2 Gothic';
 `
-
-function App() {
-  return (
-      <BrowserRouter>
-      <GlobalStyle />
-      <GlobalFonts />
-      <Container>
-        <Card>
-        <Routes>
-          <Route path='/' element={<Home id={0}/> }></Route>
-          <Route path='/auth' element={<Auth/>}>
-          </Route>
-        </Routes>
-        </Card>
-      </Container>
-      </BrowserRouter>
-  );
-}
 
 export default App;

@@ -24,8 +24,9 @@ font-family: 'NEXON Lv2 Gothic';
     outline: none;
 }
 `
-export const StyledSubmit = styled(StyledInput)`
+export const StyledSubmit = styled.button`
 width: 12vw !important;
+height: 2rem !important;
 margin-top: 4vh !important;
 padding: 0 !important;
 background-color: #607EAA;
@@ -34,12 +35,10 @@ color: #eee;
     background-color: #1C3879;
     transition: all 0.5s;
 }
-`
-export const StyledDisabledSubmit = styled(StyledInput)`
-width: 12vw !important;
-margin-top: 4vh !important;
-padding: 0 !important;
-text-align: center;
-background-color: #AAA;
-color: #eee;
+&:disabled{
+    background-color: #aaa;
+    &:hover{
+        background-color: #aaa;
+    }
+}
 `
