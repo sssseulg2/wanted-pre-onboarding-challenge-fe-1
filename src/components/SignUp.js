@@ -38,7 +38,7 @@ function SignUp() {
             });
             alert(res.data.message);
             localStorage.setItem("token", res.data.token);
-            navigate("/todolist");
+            navigate("/todolist/0");
           } catch (error) {
             alert(error.response.data.details);
           }
