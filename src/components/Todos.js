@@ -48,10 +48,10 @@ function Todos() {
             {error && <div>'투두 리스트를 받아들일 수 없습니다.'</div>}
             <TodosWrap>
                 {
-                    todos && todos.map(item => (
+                    todos && todos.reverse().map(item => (
                         <div key={item.id} onClick={() => {openTodo(item.id);}}>
                             <TodoTitle>{item.title}</TodoTitle> 
-                            <TodoUpdated>{item.updatedAt.substr(0,4)}년 {item.updatedAt.substr(5,2)}월 {item.updatedAt.substr(5,2)}일 </TodoUpdated>
+                            <TodoUpdated>{item.updatedAt.substr(0,4)}년 {item.updatedAt.substr(5,2)}월 {item.updatedAt.substr(8,2)}일 </TodoUpdated>
                             <Line />
                         </div>
                         

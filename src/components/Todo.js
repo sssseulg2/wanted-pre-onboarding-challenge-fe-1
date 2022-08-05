@@ -23,7 +23,7 @@ function Todo({id}) {
           }
     }
     const editTodo = () => {
-        console.log("수정")
+        navigate(`/todolist/update`, {state: {id: id}});
     }
     useEffect(() => {
         const getTodos = async() => {

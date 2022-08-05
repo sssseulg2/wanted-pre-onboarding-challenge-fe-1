@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import Home from './pages/Home.js';
 import Auth from './pages/Auth.js';
 import TodoList from './pages/TodoList.js';
-import CreateTodo from './components/CreateTodo.js';
 
 import GlobalStyle from './styles/GlobalStyle.js';
 import GlobalFonts from './styles/font.js';
