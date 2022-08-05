@@ -24,19 +24,15 @@ function Todos() {
     useEffect(() => {
         const getTodos = async() => {
             setError("");
-            // setLoading(true);
             try {
                 const result = await axios.get("http://localhost:8080/todos", {
                     headers: {
                         'Authorization': `Bearer ${token}`
                     }
                 });
-                // console.log(result.data.data)
                 setTodos([...result.data.data]);
-                // setLoading(false);
 
             } catch(error) {
-                console.log(error.response);
                 setError(error);
             }
         }

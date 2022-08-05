@@ -48,7 +48,6 @@ function UpdateTodo({id}) {
                 setContent([...result.data.data.content].join(""));
 
             } catch(error) {
-                console.log(error.response);
                 alert("메모를 불러올 수 없습니다.")
             }
         }

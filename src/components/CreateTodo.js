@@ -20,8 +20,6 @@ function CreateTodo() {
                     'Authorization': `Bearer ${token}`
                 },
             });
-            console.log(res)
-            console.log(res.data.data)
             navigate('/todolist/0');
           } catch (error) {
             alert(error.response);

@@ -37,8 +37,7 @@ function Todo({id}) {
                 setTodo({...result.data.data});
 
             } catch(error) {
-                console.log(error.response);
-                setError(error);
+                setError(error.response);
             }
         }
         getTodos();
